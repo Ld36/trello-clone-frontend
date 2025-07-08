@@ -67,7 +67,8 @@
               "buildTarget": "trello-clone:build:production"
             },
             "development": {
-              "buildTarget": "trello-clone:build:development"
+              "buildTarget": "trello-clone:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

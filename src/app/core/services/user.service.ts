@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 import { User } from '../models';
 
 export interface UpdateUserDto {
@@ -13,7 +14,7 @@ export interface UpdateUserDto {
   providedIn: 'root'
 })
 export class UserService {
-  private readonly baseUrl = 'http://localhost:3000';
+  private readonly baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 import { Card, CreateCardDto, UpdateCardDto, MoveCardDto, ReorderCardDto } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
-  private readonly baseUrl = 'http://localhost:3000';
+  private readonly baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
